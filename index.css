@@ -1,0 +1,63 @@
+body {
+  background-color: #1c1c1c;
+  color: whitesmoke;
+}
+
+#parent,
+#aunt {
+  font-family: "Koulen", cursive;
+  font-size: 10rem;
+}
+
+#child {
+  position: relative;
+  left: 675px;
+}
+
+#parent:hover #child {
+  cursor: pointer;
+  transition: ease-out 1s;
+  left: 365px;
+}
+
+#parent:hover + #aunt .right-bracket {
+  transition: ease-out 1s;
+  right: 400px;
+}
+
+#nephew {
+  z-index: -2;
+  position: relative;
+  left: 440px;
+  top: -288px;
+  opacity: 0;
+}
+
+#parent:hover + #aunt #nephew {
+  transition: 2s;
+  opacity: 1;
+}
+
+.left-bracket {
+  z-index: -3;
+  left: -20px;
+  top: 60px;
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  border-left: 5px solid whitesmoke;
+  border-top: 5px solid whitesmoke;
+  border-radius: 2px;
+}
+
+.right-bracket {
+  z-index: -3;
+  top: 162px;
+  right: 665px;
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  border-right: 5px solid whitesmoke;
+  border-bottom: 5px solid whitesmoke;
+  border-radius: 2px;
+}
